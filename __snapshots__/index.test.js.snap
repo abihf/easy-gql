@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`easy-gql should handle multiple fragment 1`] = `
+Object {
+  "definitions": Array [
+    Object {
+      "directives": Array [],
+      "kind": "OperationDefinition",
+      "name": Object {
+        "kind": "Name",
+        "value": "Q1",
+      },
+      "operation": "query",
+      "selectionSet": Object {
+        "kind": "SelectionSet",
+        "selections": Array [
+          Object {
+            "alias": null,
+            "arguments": Array [],
+            "directives": Array [],
+            "kind": "Field",
+            "name": Object {
+              "kind": "Name",
+              "value": "parent",
+            },
+            "selectionSet": Object {
+              "kind": "SelectionSet",
+              "selections": Array [
+                Object {
+                  "directives": Array [],
+                  "kind": "FragmentSpread",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "F2",
+                  },
+                },
+                Object {
+                  "directives": Array [],
+                  "kind": "FragmentSpread",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "F3",
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+      "variableDefinitions": Array [],
+    },
+    Object {
+      "directives": Array [],
+      "kind": "FragmentDefinition",
+      "name": Object {
+        "kind": "Name",
+        "value": "F2",
+      },
+      "selectionSet": Object {
+        "kind": "SelectionSet",
+        "selections": Array [
+          Object {
+            "alias": null,
+            "arguments": Array [],
+            "directives": Array [],
+            "kind": "Field",
+            "name": Object {
+              "kind": "Name",
+              "value": "field1",
+            },
+            "selectionSet": null,
+          },
+        ],
+      },
+      "typeCondition": Object {
+        "kind": "NamedType",
+        "name": Object {
+          "kind": "Name",
+          "value": "ParentType",
+        },
+      },
+    },
+    Object {
+      "directives": Array [],
+      "kind": "FragmentDefinition",
+      "name": Object {
+        "kind": "Name",
+        "value": "F3",
+      },
+      "selectionSet": Object {
+        "kind": "SelectionSet",
+        "selections": Array [
+          Object {
+            "alias": null,
+            "arguments": Array [],
+            "directives": Array [],
+            "kind": "Field",
+            "name": Object {
+              "kind": "Name",
+              "value": "field2",
+            },
+            "selectionSet": null,
+          },
+          Object {
+            "directives": Array [],
+            "kind": "FragmentSpread",
+            "name": Object {
+              "kind": "Name",
+              "value": "FC",
+            },
+          },
+        ],
+      },
+      "typeCondition": Object {
+        "kind": "NamedType",
+        "name": Object {
+          "kind": "Name",
+          "value": "ParentType",
+        },
+      },
+    },
+    Object {
+      "directives": Array [],
+      "kind": "FragmentDefinition",
+      "name": Object {
+        "kind": "Name",
+        "value": "FC",
+      },
+      "selectionSet": Object {
+        "kind": "SelectionSet",
+        "selections": Array [
+          Object {
+            "alias": null,
+            "arguments": Array [],
+            "directives": Array [],
+            "kind": "Field",
+            "name": Object {
+              "kind": "Name",
+              "value": "childFragment",
+            },
+            "selectionSet": null,
+          },
+        ],
+      },
+      "typeCondition": Object {
+        "kind": "NamedType",
+        "name": Object {
+          "kind": "Name",
+          "value": "ChildType",
+        },
+      },
+    },
+  ],
+  "kind": "Document",
+  "loc": Object {
+    "end": 34,
+    "start": 0,
+  },
+}
+`;
